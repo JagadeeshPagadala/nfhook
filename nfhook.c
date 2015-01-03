@@ -151,9 +151,6 @@ static struct nf_hook_ops nfho = {
 	/*.hooknum = NF_INET_LOCAL_IN, change to NF_INET_FORWARD to \
 		capture on arouter,  Refer netfiletr packet path diagram */
 	.priority = NF_IP_PRI_FIRST,
-	.pf	= PF_INET,
-		/* PF_BRIDGE is for bridge interface and PF_INET for IPv4 */
-	.priority = NF_IP_PRI_FIRST,
 	/* Priority of the function within the hook (i.e. hooknum),
 			hook fn will be invoked in the priority order*/
 };
